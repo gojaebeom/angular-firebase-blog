@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import * as Masonry from 'masonry-layout';
 import * as imagesloaded from 'imagesloaded';
 import { Post } from '../post';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-post-list',
@@ -11,7 +12,14 @@ export class PostListComponent implements OnInit {
   title = 'jb-world';
   posts: Post[] = [];
 
-  constructor() {
+  constructor(private http: HttpClient) {
+    http
+      .get(
+        'https://asia-northeast3-jb-world-2188e.cloudfunctions.net/api/posts'
+      )
+      .subscribe((observer) => {
+        console.debug(observer);
+      });
     this.posts.push(
       new Post(
         'java01',

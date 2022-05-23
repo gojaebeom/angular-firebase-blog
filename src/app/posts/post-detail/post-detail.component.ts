@@ -62,9 +62,7 @@ export class PostDetailComponent implements OnInit {
     const masonryLayoutEl: any = document.querySelector('.masonry-layout');
     imagesloaded(masonryLayoutEl, () => {
       new Masonry(masonryLayoutEl, {
-        // options
         itemSelector: '.masonry-item',
-        // columnWidth: 300,
       });
     });
   }

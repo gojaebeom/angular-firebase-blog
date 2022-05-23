@@ -1,10 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Post } from './posts/post';
-import * as Masonry from 'masonry-layout';
-import * as imagesloaded from 'imagesloaded';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
 })
-export class AppComponent{}
+export class AppComponent {}
